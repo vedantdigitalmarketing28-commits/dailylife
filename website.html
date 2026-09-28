@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delhi Zaika |Restaurant in Delhi</title>
+
+    <meta name="description" content="Delhi Zaika is a premium Indian restaurant in Delhi serving authentic North Indian cuisine, kebabs, curries and traditional dishes.">
+
+    <style>
+
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #b22222;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #8b0000;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: #111;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #f5c542;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f5c542;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 90vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            padding: 12px 26px;
+            border-radius: 5px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #111;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            padding: 90px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            color: #8b0000;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+
+        /* =========================
+           MENU
+        ========================== */
+
+        .menu {
+            padding: 90px 0;
+            background: #faf7f0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 20px;
+        }
+
+        .menu-info h3 {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .menu-info p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            color: #b22222;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           SPECIAL OFFER
+        ========================== */
+
+        .offer {
+            padding: 80px 0;
+            background: #8b0000;
+            color: white;
+            text-align: center;
+        }
+
+        .offer h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .offer p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .offer .btn {
+            background: #f5c542;
+            color: #111;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery {
+            padding: 90px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           REVIEWS
+        ========================== */
+
+        .reviews {
+            padding: 90px 0;
+            background: #faf7f0;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        .stars {
+            color: #f5b400;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .review-card h4 {
+            color: #8b0000;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            padding: 90px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #8b0000;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h3 {
+            color: #f5c542;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #ccc;
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <div class="logo">
+                Delhi <span>Zaika</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <h1>Greater Noida Taste of Delhi</h1>
+
+            <p>
+                Experience traditional North Indian flavours,
+                delicious kebabs and rich curries made with fresh ingredients.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="btn">
+                    Explore Menu
+                </a>
+
+                <a href="#contact" class="btn-outline">
+                    Reserve a Table
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-img">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+                    alt="Delhi Zaika restaurant interior"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h2>Welcome to Delhi Zaika</h2>
+
+                <p>
+                    Delhi Zaika brings the authentic flavours of North India
+                    to the heart of Delhi.
+                </p>
+
+                <p>
+                    From traditional butter chicken and aromatic biryanis
+                    to freshly prepared kebabs, every dish is prepared
+                    with carefully selected ingredients.
+                </p>
+
+                <p>
+                    Whether you are enjoying a family dinner,
+                    celebrating a special occasion or meeting friends,
+                    we offer a warm and comfortable dining experience.
+                </p>
+
+                <a href="#contact" class="btn">
+                    Visit Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MENU
+    ========================== -->
+
+    <section class="menu" id="menu">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Special Menu</h2>
+
+                <p>
+                    Discover some of our most loved dishes.
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+
+                <div class="menu-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80"
+                        alt="Butter Chicken"
+                    >
+
+                    <div class="menu-info">
+
+                        <h3>Butter Chicken</h3>
+
+                        <p>
+                            Creamy tomato-based curry with tender chicken.
+                        </p>
+
+                        <span class="price">₹420</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80"
+                        alt="Chicken Tikka"
+                    >
+
+                    <div class="menu-info">
+
+                        <h3>Chicken Tikka</h3>
+
+                        <p>
+                            Char-grilled chicken marinated in Indian spices.
+                        </p>
+
+                        <span class="price">₹360</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80"
+                        alt="Biryani"
+                    >
+
+                    <div class="menu-info">
+
+                        <h3>Chicken Biryani</h3>
+
+                        <p>
+                            Fragrant basmati rice cooked with aromatic spices.
+                        </p>
+
+                        <span class="price">₹380</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=800&q=80"
+                        alt="Paneer Tikka"
+                    >
+
+                    <div class="menu-info">
+
+                        <h3>Paneer Tikka</h3>
+
+                        <p>
+                            Soft paneer grilled with onions and spices.
+                        </p>
+
+                        <span class="price">₹300</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80"
+                        alt="Naan"
+                    >
+
+                    <div class="menu-info">
+
+                        <h3>Butter Naan</h3>
+
+                        <p>
+                            Freshly baked naan topped with butter.
+                        </p>
+
+                        <span class="price">₹80</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=80"
+                        alt="Gulab Jamun"
+                    >
+
+                    <div class="menu-info">
+
+                        <h3>Gulab Jamun</h3>
+
+                        <p>
+                            Soft traditional Indian dessert served warm.
+                        </p>
+
+                        <span class="price">₹120</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         OFFER
+    ========================== -->
+
+    <section class="offer">
+
+        <div class="container">
+
+            <h2>Weekend Special</h2>
+
+            <p>
+                Enjoy our special family dining menu every Saturday & Sunday.
+            </p>
+
+            <a href="#contact" class="btn">
+                Book Your Table
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Gallery</h2>
+
+                <p>
+                    A glimpse of our food and dining experience.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=800&q=80"
+                    alt="Restaurant food"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                    alt="Restaurant interior"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                    alt="Indian food"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80"
+                    alt="Restaurant dining"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         REVIEWS
+    ========================== -->
+
+    <section class="reviews">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>What Our Guests Say</h2>
+
+                <p>
+                    Feedback from our happy customers.
+                </p>
+
+            </div>
+
+
+            <div class="review-grid">
+
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Amazing food and excellent service.
+                        The butter chicken was delicious!"
+                    </p>
+
+                    <h4>— Rahul Sharma</h4>
+
+                </div>
+
+
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "A great place for family dinner.
+                        The ambience was beautiful."
+                    </p>
+
+                    <h4>— Priya Mehta</h4>
+
+                </div>
+
+
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Authentic Indian flavours and
+                        very friendly staff. Highly enjoyable."
+                    </p>
+
+                    <h4>— Arjun Kapoor</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Reserve Your Table</h2>
+
+                <p>
+                    Contact us to make your reservation.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info">
+
+                    <h3>Visit Delhi Zaika</h3>
+
+                    <p>
+                        📍 Connaught Place, New Delhi, India
+                    </p>
+
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p>
+                        ✉️ hello@delhizaika.com
+                    </p>
+
+                    <p>
+                        🕐 Monday – Sunday: 11:00 AM – 11:00 PM
+                    </p>
+
+                </div>
+
+
+
+                <form class="contact-form">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        required
+                    >
+
+                    <textarea
+                        placeholder="Your Message"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn"
+                    >
+                        Book a Table
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div>
+
+                    <h3>Delhi Zaika</h3>
+
+                    <p>
+                        Authentic North Indian cuisine
+                        served with warmth and tradition.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#menu">Menu</a></p>
+                    <p><a href="#contact">Contact</a></p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Opening Hours</h3>
+
+                    <p>Monday – Friday: 11 AM – 11 PM</p>
+
+                    <p>Saturday – Sunday: 11 AM – 12 AM</p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Delhi Zaika. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
